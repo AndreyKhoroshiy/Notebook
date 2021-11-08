@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}{{ contact.name }}{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ contact.name }}</h1>
+        <p>{{ contact.preview }}</p>
+        <p>{{ contact.country }}</p>
+        <p>{{ contact.town }}</p>
+        <p>{{ contact.organization }}</p>
+        <p>{{ contact.telephone }}</p>
+        <p>{{ contact.email }}</p>
+        <a href="{% url 'update' contact.id %}" class="btn btn-info">Редактировать</a>
+        <a href="{% url 'list' %}" class="btn btn-info">К списку</a>
+    </div>
+{% endblock %}

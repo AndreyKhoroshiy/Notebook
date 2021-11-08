@@ -1,0 +1,20 @@
+{% extends 'main/base.html' %}
+
+{% block title %}Список контактов{% endblock %}
+
+{% block content %}
+        <div class="features">
+                <h1>Список контактов</h1>
+                {% if contacts %}
+                        {% for el in contacts %}
+                                <div class="allert alert-warning">
+                                        <h3><a href="{% url 'update' el.id %}">{{ el.name }}</a></h3>
+                                        <p>{{ el.preview }}</p>
+                                </div>
+                        {% endfor %}
+                {% else %}
+                        <p>У Вас нет записей</p>
+                {% endif %}
+                <a href="{% url 'create' %}"><button class="btn btn-info">Создать новый контакт</button></a>
+        </div>
+{% endblock %}
