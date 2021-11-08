@@ -11,6 +11,8 @@
         <p>{{ contact.organization }}</p>
         <p>{{ contact.telephone }}</p>
         <p>{{ contact.email }}</p>
+        <p>{{ contact.date_of_creation }}</p>
+        <p>{{ contact.date_of_change }}</p>
         <a href="{% url 'update' contact.id %}" class="btn btn-info">Редактировать</a>
         <a href="{% url 'list' %}" class="btn btn-info">К списку</a>
     </div>
